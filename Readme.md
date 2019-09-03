@@ -1,7 +1,7 @@
 # Личный проект «Техномарт»
 
 * Студент: [Zarif Taktashev](https://up.htmlacademy.ru/htmlcss/26/user/378017).
-* Наставник: `Анатолий Долгов`.
+* Наставник: [Анатолий Долгов] (https://htmlacademy.ru/profile/dolgov_anatoly).
 
 ---
 
