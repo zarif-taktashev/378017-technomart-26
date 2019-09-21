@@ -7,7 +7,8 @@
   <body>
     <header>
       <section>
-        <a class="logo" aria-label="Техномарт" href=""></a>
+        <h2 class="visually-hodden">Оформление заказов</h2>
+        <a class="logo" href="">Техномарт</a>
         <label class="search-label" for="search">Поиск:</label>
         <input id="search" class="search" type="text">
         <ul class="booking-list">
@@ -23,16 +24,17 @@
         </ul>
       </section>
       <section>
+        <h2 class="visually-hodden">Войти/Зарегестрироваться</h2>
         <p class="short-description">
           Интернет-магазин</br>
           строительных материалов</br>
           и инструментов для рем
         </p>
         <p class="tel">
-          <span>+7 (812) 555-05-55</span>
+          +7 (812) 555-05-55
         </p>
         <p class="address">
-          <span>г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</span>
+          г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
         </p>
         <ul class="entrance-list">
           <li class="entrance-list__item">
@@ -44,6 +46,7 @@
         </ul>
       </section>
       <section>
+        <h2 class="visually-hodden">Главная навигация</h2>
         <nav class="nav">
           <ul class="nav__list">
             <li class="nav__item nav__item--current">
@@ -70,7 +73,7 @@
           </ul>
         </nav>
       </section>
-    </header>   
+    </header>
     <main>
       <nav class="bread-crumbs">
         <ul class="bread-crumbs__list">
@@ -88,20 +91,57 @@
       </nav>
       <h1 class="catalog-header">Перфораторы</h1>
       <section>
-        <h2 class="producer-header">ПРОИЗВОДИТЕЛИ:</h2>
-        <ul class="producer__list">
-            <li class="producer__item">BOSCH</li>
-            <li class="producer__item">ИНТЕРСКОЛ</li>
-            <li class="producer__item">MAKIta</li>
-            <li class="producer__item">Dewalt</li>
-            <li class="producer__item">Hitachi</li>
-        </ul>
-        <h2 class="supply-header">ПИТАНИЕ:</h2>
-        <ul class="supply-list">
-          <li class="supply-item">Аккумуляторные</li>
-          <li class="supply-item">Сетевые</li>
-        </ul>
-        <button class="show-button">ПОКАЗАТЬ</button>
+        <form action="" method="POST">
+          <h2 class="producer-header">ПРОИЗВОДИТЕЛИ:</h2>
+          <ul class="producer__list">
+              <li class="producer__item">
+                <label for="bosch">
+                    <input type="checkbox" id="bosch" name="bosch" class="visually-hidden">
+                    BOSCH
+                </label>
+              </li>
+              <li class="producer__item">
+                <label for="interscol">
+                  <input type="checkbox" id="interscol" name="interscol" class="visually-hidden">
+                  ИНТЕРСКОЛ
+                </label>
+              </li>
+              <li class="producer__item">
+                <label for="makita">
+                  <input type="checkbox" id="makita" name="makita" class="visually-hidden">
+                  MAKIta
+                </label>
+              </li>
+              <li class="producer__item">
+                <label for="dewalt">
+                  <input type="checkbox" id="dewalt" name="dewalt" class="visually-hidden">
+                  Dewalt
+                </label>
+              </li>
+              <li class="producer__item">
+                <label for="hitachi">
+                  <input type="checkbox" id="hitachi" name="hitachi" class="visually-hidden">
+                  Hitachi
+                </label>
+              </li>
+          </ul>
+          <h2 class="supply-header">ПИТАНИЕ:</h2>
+          <ul class="supply-list">
+            <li class="supply-item">
+              <label for="battery">
+                <input type="radio" id="battery" name="power" class="visually-hidden" checked>
+                Аккумуляторные
+              </label>
+            </li>
+            <li class="supply-item">
+              <label for="network">
+                <input type="radio" id="network" name="power" class="visually-hidden">
+                Сетевые
+              </label>
+            </li>
+          </ul>
+          <button class="show-button" type="submit">ПОКАЗАТЬ</button>
+        </form>
       </section>
       <section>
         <h2>Список перфораторов</h2>
@@ -228,8 +268,9 @@
     </main>
     <footer>
       <section>
+        <h2 class="visually-hodden">Адресс</h2>
         <a class="logo" href="">
-          <img src="" alt="Техномарт">
+          Техномарт
         </a>
         <p class="footer-address">
           г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 </br>
@@ -237,6 +278,7 @@
         </p>
       </section>
       <section>
+        <h2 class="visually-hodden">Нижняя навигация</h2>
         <ul class="nav__list">
           <li class="nav__item">
             <a class="nav__link" href="">Компания</a>
@@ -270,6 +312,7 @@
         </ul>
       </section>
       <section>
+        <h2 class="visually-hodden">Мы в социальных сетях</h2>
         <p class="rights">
           © 2010–2019 Компания «Техномарт»</br>
           Все права защищены
@@ -295,5 +338,14 @@
         </p>
       </section>
     </footer>
+    <section>
+      <p class="msg-block">
+        <img src="img/okay.svg" alt="Зеленая галочка">
+      </p>
+      <p class="button-blok">
+        <a href="" class="order-button">ОФОРМИТЬ ЗАКАЗ</a>
+        <button class="close-button" type="button">ПРОДОЛЖИТЬ ПОКУПКИ</button>
+      </p>
+    </section>
   </body>
 </html>
