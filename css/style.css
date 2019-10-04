@@ -1,0 +1,328 @@
+/*---FONTS START---*/
+@font-face{
+    font-family: "Cuprum";
+    src: url(../fonts/web/cuprum.woff2) format(woff2);
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+}
+@font-face{
+    font-family: "Cuprum Bold";
+    src: url(../fonts/web/cuprumbold.woff2) format(woff2);
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+}
+@font-face{
+    font-family: "Cuprum Bold Italic";
+    src: url(../fonts/web/cuprumbolditalic.woff2) format(woff2);
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+}
+@font-face{
+    font-family: "Cuprum Italic";
+    src: url(../fonts/web/cuprumitalic.woff2) format(woff2);
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+}
+@font-face{
+    font-family: "PT Sans";
+    src: url(../fonts/web/ptsans.woff2) format(woff2);
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+}
+@font-face{
+    font-family: "PT Sans Bold";
+    src: url(../fonts/web/ptsansbold.woff2) format(woff2);
+    font-style: normal;
+    font-display: swap;
+    font-weight: 400;
+}
+/*---FONTS END---*/
+/*---MAIN START---*/
+html{ 
+    box-sizing: border-box; 
+}
+*, 
+*::before, 
+*::after{ 
+    box-sizing: inherit; 
+}
+body{
+    margin: 0;
+    page-break-after: 0;
+    font-family: "Cuprum", Arial, sans-serif;
+    font-size: 17px;
+    line-height: 17px;
+    font-weight: 400;
+    color: #000000;
+    background-color: #ffffff;
+}
+footer{
+    background-color: #32425c;
+}
+a{
+    text-decoration: none;
+}
+.visually-hidden {
+    position: absolute;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+}
+/*---MAIN END---*/
+/*---HEADER START---*/
+.checkout{
+    background-color: #32425c;
+}
+.logo{
+    color: #ffffff;
+    background-color: #ee3643;
+    text-transform: uppercase;
+    z-index: 228;   
+}
+.logo:hover,
+.logo:focus{
+    background-color: #ca2c37;
+}
+.checkout__btn{
+    color: #ffffff;
+    background-color: #32425c;
+    border: 0;
+}
+.checkout__btn:hover{
+    color: #ffffff;
+    background-color: #212a3a;
+    border: 0;
+}
+.checkout__btn:focus{
+    color: #000000;
+    background-color: #ffffff;
+    border: 0;
+}
+.checkout__ankor{
+    color: #ffffff;
+}
+.checkout__ankor:hover{
+    background-color: #212a3a;
+}
+.checkout__ankor:active{
+    background-color: #161d29;
+}
+.checkout_order{
+    color: #ffffff;
+    background-color: #63a63e;
+}
+.checkout_order:hover{
+    background-color: #5fbb2d;
+}
+.checkout_order:active{
+    color: #b6c8ae;
+    background-color: #518534;
+}
+.checkout_order:focus{
+    color: #eef4ec;
+    background-color: #63a63e;
+}
+.short-description{
+    color: #ee3643;
+    font-size: 16px;
+    font-style: italic;
+    line-height: 23px;
+    font-family:  "Cuprum Italic", Arial, sans-serif;
+    background-color: #ffffff;
+}
+.nav-list,
+.entrance-list,
+.booking-list,
+.advantages-list,
+.bread-crumbs__list,
+.switch__list,
+.goods-list,
+.social-networks-list{
+    list-style: none;
+}
+.main-navigation{
+    background-color: #32425c;
+}
+.nav__link{
+    color: #ffffff;
+}
+.nav__link:focus,
+.nav__link:hover{
+    color: #ffffff;
+    background-color: #293449;
+}
+.nav__link:active{
+    color: #b6c8ae;
+    background-color: #1d2739;
+}
+.tel{
+    font-size: 21px;
+    line-height: 21px;
+    color: #ee3643;
+    background-color: #ffffff;
+}
+.address{
+    color: #32425c;
+    font-size: 14px;
+    line-height: 24px;
+}
+.entrance-list__link{
+    font-size: 21px;
+    line-height: 21px;
+}
+.entrance-list__link:hover{
+    color:#ee3643;
+}
+.entrance-list__link:active{
+    color: #b6c8ae;
+}
+/*---HEADER END---*/
+/*---CONTENT INDEX START---*/
+.section-header{
+    font-size: 30px;
+    line-height: 30px;
+    font-weight: normal;
+}
+.paragraph-text{
+    font-size: 13px;
+    line-height: 24px;
+    font-family: "PT Sans", Arial, sans-serif;
+}
+.advantages__item{
+    font-size: 18px;
+    line-height: 20px;
+}
+.red-btn{
+    font-size: 14px;
+    line-height: 18px;
+    color: #ffffff;
+    background-color: #ee3643;
+}
+.red-btn:hover,
+.red-btn:active{
+    background-color: #ba2732;
+}
+.bread-crumbs__link{
+    font-size:13px;
+    line-height:18px;
+    color: #000000;
+}
+.catalog-header{
+    font-size:30px;
+    line-height:30px;
+    font-weight: 400;
+    color: #32425c;
+    background-color: #f2f6f8;
+}
+.switch-header{
+    font-size: 17px;
+    line-height: 30px;
+    font-family: "PT Sans Bold", Arial, sans-serif;
+}
+.switch__item{
+    font-size: 15px;
+    line-height: 20px;
+    font-family: "PT Sans", Arial, sans-serif;
+}
+.show-button{
+    font-size: 13px;
+    line-height: 18px;
+    font-family: "PT Sans", Arial, sans-serif;
+    border: 1px solid #e5e5e5;
+    background-color: #ffffff;
+}
+.goods-list__header{
+    font-size: 18px;
+    line-height: 20px;
+    color: #000000;
+    font-family: "PT Sans Bold", Arial, sans-serif;
+}
+.old-price{
+    font-size: 17px;
+    line-height: 18px;
+    font-family: "PT Sans Bold", Arial, sans-serif;
+    color: #999999;
+    text-decoration: line-through;
+}
+.current-price{
+    font-size: 17px;
+    line-height: 18px;
+    color: #ffffff;
+    background-color: #ee3643;
+}
+/*---CONTENT INDEX END---*/
+/*---FOOTER START---*/
+.footer-address{
+    font-size: 18px;
+    line-height: 24px;
+    color: #ffffff;
+}
+.feedback{
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffffff; 
+}
+.feedback__link{
+    font-size: 16px;
+    line-height: 18px;
+    color: #ffd180; 
+}
+.feedback__link:hover{
+    text-decoration: underline;
+}
+.feedback__link:active{
+    text-decoration: none;
+    color: #ee3643;
+}
+.footer__link{
+    font-size:18px;
+    line-height: 24px;
+    color: #ffffff;
+    background-color: #32425c;
+}
+.footer__link:hover{
+    text-decoration: underline;
+}
+.footer__link:active{
+    text-decoration: none;
+    color: #b6c8ae;
+}
+.footer__link-yellow{
+    font-size:18px;
+    line-height: 24px;
+    color: #ffd180;
+    background-color: #32425c;
+}
+.footer__link-yellow:hover{
+    text-decoration: underline;
+}
+.footer__link-yellow:active{
+    text-decoration: none;
+    color: #ad956f;
+}
+.social-networks-list__link {
+    background-color: #212a3a;
+    color: #ffffff
+}
+.social-networks-list__link:hover{
+    background-color: #ee3643;
+    color: #ffffff
+}
+/*---FOOTER END---*/
+/*---MODALS START---*/
+.modal-login label{
+    font-size: 18px;
+    line-height: 18px;
+}
+.modal-login input[type="text"],
+.modal-login input[type="email"],
+.modal-login textarea{
+    border: 1px solid #dee3e4;
+}
+/*---MODALS END---*/

@@ -3,23 +3,27 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
     <header>
-      <section>
+      <section class="checkout">
         <h2 class="visually-hidden">Оформление заказов</h2>
         <a class="logo" href="">Техномарт</a>
-        <label class="search-label" for="search">Поиск:</label>
-        <input id="search" class="search" type="text">
+        <div class="checkout__btn">
+            <label for="search">Поиск:</label>
+            <input class="checkout__btn" id="search" class="search" type="text">
+        </div>
         <ul class="booking-list">
           <li class="booking-list__item">
-            <a class="bookmarks" href="#">Закладки: 0</a>
+            <a class="checkout__ankor" href="#">Закладки: 0</a>
           </li>
           <li class="booking-list__item">
-            <a class="basket" href="#">Корзина: 0</a>
+            <a class="checkout__ankor" href="#">Корзина: 0</a>
           </li>
           <li class="booking-list__item">
-            <a class="order" href="#">Оформить заказ</a>
+            <a class="checkout_order" href="#">Оформить заказ</a>
           </li>
         </ul>
       </section>
@@ -38,18 +42,18 @@
         </p>
         <ul class="entrance-list">
           <li class="entrance-list__item">
-            <a class="entrance-button" href="">Войти</a>
+            <a class="entrance-list__link entrance-icon" href="">Войти</a>
           </li>
           <li class="entrance-list__item">
-            <a class="registration-button" href="">Регистрация</a>
+            <a class="entrance-list__link" href="">Регистрация</a>
           </li>
         </ul>
       </section>
-      <section>
+      <section class="main-navigation">
         <h2 class="visually-hidden">Главная навигация</h2>
         <nav class="nav">
-          <ul class="nav__list">
-            <li class="nav__item nav__item--current">
+          <ul class="nav-list">
+            <li class="nav__item nav__item-current">
               <a  class="nav__link" href="">Главная</a>
             </li>
             <li class="nav__item">
@@ -77,30 +81,30 @@
     <main>
       <h1 class="visually-hidden">Техномарт</h1>
       <section>
-        <h2 class="description-header">КОМПАНИЯ «Техномарт»</h2>
-        <p class="advantages">
+        <h2 class="section-header">КОМПАНИЯ «Техномарт»</h2>
+        <p class="paragraph-text">
           Настоящий мужской шопинг начинается здесь! Огромный выбор для ремонта и <br>
           строительства не оставит равнодушнымилюбителей сэкономить на гастарбайтерах.
         </p>
-        <p class="advantages">
+        <p class="paragraph-text">
           Мы можем доставить ваш товар в самые отдаленные точки России!</br>
           Техномарт работает со многими транспортными компаниями:
         </p>
-        <ul class="advantages__list">
+        <ul class="advantages-list">
           <li class="advantages__item">Деловые линии</li>
           <li class="advantages__item">Автотрейдинг</li>
           <li class="advantages__item">ЖелДорЭкспедиция</li>
         </ul>
-        <a class="about-button" href="">Подробнее о компании</a>
+        <a class="red-btn" href="">Подробнее о компании</a>
       </section>
       <section>
         <figure>
-          <h2 class="contacts-header">КОНТАКТЫ</h2>
-          <p class="contacts-paragraph">
+          <h2 class="section-header">КОНТАКТЫ</h2>
+          <p class="paragraph-text">
             Вы можете забрать товар сами,  заехав в наш офис:
           </p>
           <img src="img/map.jpg" alt="г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8">  
-          <button class="help-button" type="button">Заблудились? НАШИТЕ НАМ!</button>
+          <button class="red-btn" type="button">Заблудились? НАШИТЕ НАМ!</button>
         </figure>
       </section>
     </main>
@@ -117,41 +121,41 @@
       </section>
       <section>
         <h2 class="visually-hidden">Нижняя навигация</h2>
-        <ul class="nav__list">
+        <ul class="nav-list">
           <li class="nav__item">
-            <a class="nav__link" href="">Компания</a>
+            <a class="footer__link" href="">Компания</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="">Новости</a>
+            <a class="footer__link" href="">Новости</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="">Каталог</a>
+            <a class="footer__link" href="">Каталог</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="">Доставка</a>
+            <a class="footer__link" href="">Доставка</a>
           </li>
           <li class="nav__item">
-            <a class="nav__link" href="">Контакты</a>
+            <a class="footer__link" href="">Контакты</a>
           </li>
         </ul>
-        <ul class="nav__list">
+        <ul class="nav-list">
           <li class="nav__item">
-            <a class="nav__link-yellow" href="">Материалы</a>
+            <a class="footer__link-yellow" href="">Материалы</a>
           </li>
           <li>
-            <a class="nav__link-yellow" href="">Техника</a>
+            <a class="footer__link-yellow" href="">Техника</a>
           </li>
           <li>
-            <a class="nav__link-yellow" href="">Инструмент</a>
+            <a class="footer__link-yellow" href="">Инструмент</a>
           </li>
           <li>
-            <a class="nav__link-yellow" href="">Спецпредложения</a>
+            <a class="footer__link-yellow" href="">Спецпредложения</a>
           </li>
         </ul>
       </section>
       <section>
         <h2 class="visually-hidden">Мы в социальных сетях</h2>
-        <p class="rights">
+        <p class="feedback">
           © 2010–2019 Компания «Техномарт»</br>
           Все права защищены
         </p>
@@ -168,21 +172,21 @@
         </ul>
         <p class="feedback">
           Обратная связь:</br>
-          mail@htmlacademy.ru
+          <a class="feedback__link" href="#">@htmlacademy.ru</a>
         </p>
-        <p class="designedBy">
+        <p class="feedback">
           Разработано — </br>
-          htmlacademy.ru
+          <a class="feedback__link" href="htmlacademy.ru">htmlacademy.ru</a>
         </p>
       </section>
     </footer>
     <section>
-      <div class="big-map">
+      <div class="big-map" style="display : none"> 
         <h2 class="visually-hidden">Развернутая карта</h2>
-        <button type="button" class="button-exit"></button>
+        <button type="button" class="button-exit">x</button>
       </div>
     </section>
-    <section class="modal modal-login">
+    <section class="modal modal-login" style="display: none;">
       <h2 class="visually-hidden">Вход</h2>
       <form action="https://echo.htmlacademy.ru" method="POST" class="entarance-form">
         <label for="name">Ваше имя:</label>
@@ -193,7 +197,7 @@
         <textarea id="letter" name="letter" rows="5">
           В свободной форме
         </textarea>
-        <button type="submit">Отправить</button>
+        <button class="red-btn" type="submit">Отправить</button>
       </form>
     </section>
   </body>
