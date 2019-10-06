@@ -67,9 +67,6 @@ body{
     color: #000000;
     background-color: #ffffff;
 }
-footer{
-    background-color: #32425c;
-}
 a{
     text-decoration: none;
 }
@@ -227,21 +224,21 @@ a{
     color: #32425c;
     background-color: #f2f6f8;
 }
+.swith-form{
+    font-family: "PT Sans", Arial, sans-serif;
+}
 .switch-header{
     font-size: 17px;
     line-height: 30px;
     font-weight: 600;
-    font-family: "PT Sans", Arial, sans-serif;
 }
 .switch__item{
     font-size: 15px;
     line-height: 20px;
-    font-family: "PT Sans", Arial, sans-serif;
 }
 .show-button{
     font-size: 13px;
     line-height: 18px;
-    font-family: "PT Sans", Arial, sans-serif;
     border: 1px solid #e5e5e5;
     background-color: #ffffff;
 }
@@ -268,6 +265,9 @@ a{
 }
 /*---CONTENT INDEX END---*/
 /*---FOOTER START---*/
+.footer{
+    background-color: #32425c;
+}
 .footer-address{
     font-size: 18px;
     line-height: 24px;
