@@ -1,45 +1,51 @@
 /*---FONTS START---*/
 @font-face{
     font-family: "Cuprum";
-    src: url(../fonts/web/cuprum.woff2) format(woff2);
+    src: url("../fonts/cuprum.woff2") format("woff2"),
+         url("../fonts/cuprum.woff") format("woff");
     font-style: normal;
     font-display: swap;
     font-weight: 400;
 }
 @font-face{
-    font-family: "Cuprum Bold";
-    src: url(../fonts/web/cuprumbold.woff2) format(woff2);
+    font-family: "Cuprum";
+    src: url("../fonts/cuprumbold.woff2") format("woff2"),
+         url("../fonts/cuprumbold.woff") format("woff");
     font-style: normal;
+    font-display: swap;
+    font-weight: bold;
+}
+@font-face{
+    font-family: "Cuprum";
+    src: url("../fonts/cuprumbolditalic.woff2") format("woff2"),
+         url("../fonts/cuprumbolditalic.woff") format("woff");
+    font-style: italic;
+    font-display: swap;
+    font-weight: bold;
+}
+@font-face{
+    font-family: "Cuprum";
+    src: url("../fonts/web/cuprumitalic.woff2") format("woff2"),
+         url("../fonts/web/cuprumitalic.woff") format("woff");
+    font-style: italic;
     font-display: swap;
     font-weight: 400;
 }
 @font-face{
-    font-family: "Cuprum Bold Italic";
-    src: url(../fonts/web/cuprumbolditalic.woff2) format(woff2);
-    font-style: normal;
-    font-display: swap;
-    font-weight: 400;
-}
-@font-face{
-    font-family: "Cuprum Italic";
-    src: url(../fonts/web/cuprumitalic.woff2) format(woff2);
+    font-family: "PT Sans";
+    src: url("../fonts/ptsans.woff2") format("woff2"),
+         url("../fonts/ptsans.woff") format("woff");
     font-style: normal;
     font-display: swap;
     font-weight: 400;
 }
 @font-face{
     font-family: "PT Sans";
-    src: url(../fonts/web/ptsans.woff2) format(woff2);
+    src: url("../fonts/ptsansbold.woff2") format("woff2"),
+         url("../fonts/ptsansbold.woff") format("woff");
     font-style: normal;
     font-display: swap;
-    font-weight: 400;
-}
-@font-face{
-    font-family: "PT Sans Bold";
-    src: url(../fonts/web/ptsansbold.woff2) format(woff2);
-    font-style: normal;
-    font-display: swap;
-    font-weight: 400;
+    font-weight: bold;
 }
 /*---FONTS END---*/
 /*---MAIN START---*/
@@ -133,7 +139,8 @@ a{
     font-size: 16px;
     font-style: italic;
     line-height: 23px;
-    font-family:  "Cuprum Italic", Arial, sans-serif;
+    font-style: italic;
+    font-family:  "Cuprum", Arial, sans-serif;
     background-color: #ffffff;
 }
 .nav-list,
@@ -223,7 +230,8 @@ a{
 .switch-header{
     font-size: 17px;
     line-height: 30px;
-    font-family: "PT Sans Bold", Arial, sans-serif;
+    font-weight: 600;
+    font-family: "PT Sans", Arial, sans-serif;
 }
 .switch__item{
     font-size: 15px;
@@ -240,13 +248,15 @@ a{
 .goods-list__header{
     font-size: 18px;
     line-height: 20px;
+    font-weight: 600;
     color: #000000;
-    font-family: "PT Sans Bold", Arial, sans-serif;
+    font-family: "PT Sans", Arial, sans-serif;
 }
 .old-price{
     font-size: 17px;
     line-height: 18px;
-    font-family: "PT Sans Bold", Arial, sans-serif;
+    font-weight: 600;
+    font-family: "PT Sans", Arial, sans-serif;
     color: #999999;
     text-decoration: line-through;
 }
