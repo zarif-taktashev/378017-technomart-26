@@ -25,8 +25,8 @@
 }
 @font-face{
     font-family: "Cuprum";
-    src: url("../fonts/web/cuprumitalic.woff2") format("woff2"),
-         url("../fonts/web/cuprumitalic.woff") format("woff");
+    src: url("../fonts/cuprumitalic.woff2") format("woff2"),
+         url("../fonts/cuprumitalic.woff") format("woff");
     font-style: italic;
     font-display: swap;
     font-weight: 400;
@@ -59,7 +59,7 @@ html{
 }
 body{
     margin: 0;
-    page-break-after: 0;
+    padding: 0;
     font-family: "Cuprum", Arial, sans-serif;
     font-size: 17px;
     line-height: 17px;
@@ -79,12 +79,31 @@ a{
 }
 /*---MAIN END---*/
 /*---HEADER START---*/
+.entrance{
+    background-color: #f3f7f8;
+}
 .checkout{
     background-color: #32425c;
+    width: 100%;
+}
+.container{
+    width: 960px;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+.logo-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 45px;
+}
+.logo-container{
+    display: flex;
 }
 .logo{
     color: #ffffff;
     background-color: #ee3643;
+    padding: 15px 60px;
     text-transform: uppercase;
     z-index: 228;   
 }
@@ -92,69 +111,101 @@ a{
 .logo:focus{
     background-color: #ca2c37;
 }
-.checkout__btn{
+.search{
     color: #ffffff;
     background-color: #32425c;
     border: 0;
+    height: 100%;
+    padding: 15px 50px; 
 }
-.checkout__btn:hover{
+.search:hover{
     color: #ffffff;
     background-color: #212a3a;
     border: 0;
 }
-.checkout__btn:focus{
+.search:focus{
     color: #000000;
     background-color: #ffffff;
     border: 0;
 }
-.checkout__ankor{
+.booking-list-ankor{
     color: #ffffff;
+    padding: 15px 25px;
+    height: 100%;
+    display: block;
 }
-.checkout__ankor:hover{
+.booking-list-ankor:hover{
     background-color: #212a3a;
 }
-.checkout__ankor:active{
+.booking-list-ankor:active{
     background-color: #161d29;
 }
-.checkout_order{
+.booking-list-order{
     color: #ffffff;
     background-color: #63a63e;
+    padding: 15px 25px;
+    height: 100%;
+    display: block;
 }
-.checkout_order:hover{
-    background-color: #5fbb2d;
+.booking-list-order:hover{
+    background-color: #63a63e;
 }
-.checkout_order:active{
+.booking-list-order:active{
     color: #b6c8ae;
     background-color: #518534;
 }
-.checkout_order:focus{
+.booking-list-order:focus{
     color: #eef4ec;
     background-color: #63a63e;
+}
+.entrance-wrapper{
+    display:flex;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    justify-content: space-between;
 }
 .short-description{
     color: #ee3643;
     font-size: 16px;
     font-style: italic;
     line-height: 23px;
+    padding-left: 60px; 
     font-style: italic;
     font-family:  "Cuprum", Arial, sans-serif;
-    background-color: #ffffff;
+    margin: 0;
 }
 .nav-list,
+.nav-list-footer,
 .entrance-list,
 .booking-list,
 .advantages-list,
 .bread-crumbs__list,
 .switch__list,
+.switch__list-power,
 .goods-list,
 .social-networks-list{
     list-style: none;
 }
+.booking-list{
+    display: flex;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+}
 .main-navigation{
+    background-color: #f3f7f8;
+    padding-bottom: 60px;
+}
+.nav-list{
+    display: flex;
+    margin: 0;
+    padding: 0 25px;
     background-color: #32425c;
 }
 .nav__link{
     color: #ffffff;
+    padding: 20px 30px;
+    display: block; 
 }
 .nav__link:focus,
 .nav__link:hover{
@@ -165,67 +216,154 @@ a{
     color: #b6c8ae;
     background-color: #1d2739;
 }
+.tel-container p{
+    margin: 0;
+}
 .tel{
     font-size: 21px;
     line-height: 21px;
     color: #ee3643;
-    background-color: #ffffff;
+    padding: 10px 50px;
+    border: 3px solid #ffffff;
 }
 .address{
     color: #32425c;
     font-size: 14px;
     line-height: 24px;
+    padding: 10px;
 }
-.entrance-list__link{
+.mylinks{
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+    color: #32425c;
+    padding: 10px;
+}
+.mylinks span{
+    display: inline-block;
+    text-decoration: underline;
+    margin-right: 15px;
+}
+.entrance-list{
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+.entrance-list-item{
+    margin-left: 10px;
+}
+.entrance-list-link{
     font-size: 21px;
+    background-color: #ffffff;
+    padding: 10px 25px;
+    border: 3px solid #ffffff;
     line-height: 21px;
+    text-align: center;
+    display: block;
 }
-.entrance-list__link:hover{
+.entrance-list-link:hover{
     color:#ee3643;
 }
-.entrance-list__link:active{
+.entrance-list-link:active{
     color: #b6c8ae;
 }
 /*---HEADER END---*/
 /*---CONTENT INDEX START---*/
+.about-wrapper{
+    display: flex;
+    padding: 85px 0;
+    padding-top: 65px;
+}
+.about{
+    width: 640px;
+}
+.about .red-btn{
+    width: 220px;
+}
+.advantages-list{
+    margin: 0;
+}
+.contacts,
+.contacts .red-btn{
+    width: 300px;
+}
+.contacts figure{
+    margin: 0;
+}
+.map{
+    margin-bottom: 40px;
+}
 .section-header{
     font-size: 30px;
     line-height: 30px;
     font-weight: normal;
 }
+.contacts .paragraph-text{
+    margin-bottom: 35px;
+}
 .paragraph-text{
     font-size: 13px;
     line-height: 24px;
     font-family: "PT Sans", Arial, sans-serif;
+    margin-bottom: 25px;
 }
 .advantages__item{
     font-size: 18px;
     line-height: 20px;
+    margin-bottom: 25px;
 }
 .red-btn{
     font-size: 14px;
     line-height: 18px;
     color: #ffffff;
+    border: 0;
+    display: block;
+    padding: 10px 40px;
     background-color: #ee3643;
 }
 .red-btn:hover,
 .red-btn:active{
     background-color: #ba2732;
 }
+.bread-crumbs__list{
+    display: flex;
+    margin: 0;
+    padding: 20px 0;
+}
 .bread-crumbs__link{
     font-size:13px;
     line-height:18px;
+    margin-right: 40px;
     color: #000000;
+    font-family: "PT Sans", Arial, sans-serif;
 }
 .catalog-header{
     font-size:30px;
     line-height:30px;
     font-weight: 400;
     color: #32425c;
+    margin: 0;
+    padding: 35px 30px;
     background-color: #f2f6f8;
 }
 .swith-form{
     font-family: "PT Sans", Arial, sans-serif;
+}
+.switch-header{
+    margin: 0;
+}
+.switch__list{
+    padding: 20px 0;
+    border-bottom: 1px solid #e5e5e5;
+    margin: 0;
+    padding-left: 40px;
+    margin-bottom: 25px;
+}
+.switch__list-power{
+    padding: 20px 0;
+    margin: 0;
+    padding-left: 40px;
+    margin-bottom: 60px;
 }
 .switch-header{
     font-size: 17px;
@@ -241,42 +379,97 @@ a{
     line-height: 18px;
     border: 1px solid #e5e5e5;
     background-color: #ffffff;
+    padding: 15px 40px;
+}
+.goods{
+    display: flex;
+    padding-bottom: 50px;
+    padding-top: 20px;
+}
+.goods-list{
+    margin: 0;
+    padding:0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.goods-list__link{
+    display: block;
+    border: 1px solid #e5e5e5;
+    margin-bottom: 20px;
 }
 .goods-list__header{
     font-size: 18px;
     line-height: 20px;
     font-weight: 600;
+    text-align: center;
     color: #000000;
     font-family: "PT Sans", Arial, sans-serif;
+    margin: 0;
 }
 .old-price{
     font-size: 17px;
     line-height: 18px;
     font-weight: 600;
+    text-align: center;
     font-family: "PT Sans", Arial, sans-serif;
     color: #999999;
     text-decoration: line-through;
 }
 .current-price{
+    text-align: center;
+    margin: 0;
+    padding-bottom: 20px;
+}
+.current-price span{
     font-size: 17px;
     line-height: 18px;
     color: #ffffff;
     background-color: #ee3643;
+    width: 140px;
+    padding: 13px 40px;
+    display: inline-block;
+}
+.filters{
+    width: 220px;
+    margin-right: 20px;
+}
+.goods-catalog{
+    width: 740px;
 }
 /*---CONTENT INDEX END---*/
 /*---FOOTER START---*/
 .footer{
     background-color: #32425c;
 }
+.footer-wrapper{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 30px;
+}
 .footer-address{
     font-size: 18px;
     line-height: 24px;
     color: #ffffff;
+    margin: 0;
+    padding: 30px 0;
+}
+.footer-logo{
+    font-size: 25px;
+    line-height: 24px;
+    color: #ffffff;
+    background-color: #ee3643;
+    text-transform: uppercase;
+    display: block;
+    text-align: center;
+    width: 220px;
+    padding: 20px 40px;
 }
 .feedback{
     font-size: 16px;
     line-height: 18px;
-    color: #ffffff; 
+    color: #ffffff;
+    margin: 0;
 }
 .feedback__link{
     font-size: 16px;
@@ -290,11 +483,20 @@ a{
     text-decoration: none;
     color: #ee3643;
 }
+.footer-address-wrapper{
+    width: 340px;
+}
+.footer-nav-wrapper{
+    width: 600px;
+}
 .footer__link{
     font-size:18px;
     line-height: 24px;
     color: #ffffff;
     background-color: #32425c;
+    padding-top: 30px;
+    margin-left: 60px;
+    display: block;
 }
 .footer__link:hover{
     text-decoration: underline;
@@ -308,6 +510,9 @@ a{
     line-height: 24px;
     color: #ffd180;
     background-color: #32425c;
+    padding-top: 40px;
+    margin-left: 60px;
+    display: block;
 }
 .footer__link-yellow:hover{
     text-decoration: underline;
@@ -316,9 +521,32 @@ a{
     text-decoration: none;
     color: #ad956f;
 }
+.nav-list-footer{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    background-color: #32425c;
+}
+.social{
+    padding: 35px 0;
+    background-color: #293449;
+}
+.social-networks-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.social-networks-list{
+    margin: 0;
+    display: flex;
+}
 .social-networks-list__link {
     background-color: #212a3a;
-    color: #ffffff
+    color: #ffffff;
+    display : block;
+    margin-right: 5px;
+}
+.social-networks-list__link img{
+    padding: 10px 5px;
 }
 .social-networks-list__link:hover{
     background-color: #ee3643;
