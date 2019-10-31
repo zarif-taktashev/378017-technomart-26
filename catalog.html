@@ -15,17 +15,28 @@
             <div class="logo-container">
               <a class="logo" href="">Техномарт</a>
               <form action="#" class="search-form">
-                <label for="search" class="visually-hidden"></label>
-                <input value="Поиск:" id="search" class="search" type="text">
-                <button class="visually-hidden" type="submit"></button>
+                <input id="search" class="search" type="text">
+                <svg width="17" height="17" class="search-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="17px"
+                    height="17px" viewBox="0 0 17 17" enable-background="new 0 0 17 17" xml:space="preserve">
+                  <g id="Layer_1">
+                </g>
+                <g id="Layer_2">
+                  <path fill="#fff" d="M17,15.586l-3.542-3.542C14.421,10.782,15,9.21,15,7.5C15,3.358,11.643,0,7.5,0C3.358,0,0,3.358,0,7.5
+                    C0,11.643,3.358,15,7.5,15c1.71,0,3.282-0.579,4.544-1.542L15.586,17L17,15.586z M2,7.5C2,4.467,4.467,2,7.5,2
+                    C10.532,2,13,4.467,13,7.5c0,3.032-2.468,5.5-5.5,5.5C4.467,13,2,10.532,2,7.5z"/>
+                </g>
+                </svg>
+                <label for="search" class="search-label">
+                  <span>Поиск:</span>
+                </label>
               </form>
             </div>
             <ul class="booking-list">
               <li class="booking-list-item">
-                <a class="booking-list-ankor" href="#">Закладки: 0</a>
+                <a class="booking-list-ankor booking-list-bookmarks" href="#">Закладки: 0</a>
               </li>
               <li class="booking-list-item">
-                <a class="booking-list-ankor" href="#">Корзина: 0</a>
+                <a class="booking-list-ankor booking-list-cart" href="#">Корзина: 0</a>
               </li>
               <li class="booking-list-item">
                 <a class="booking-list-order" href="#">Оформить заказ</a>
@@ -52,9 +63,10 @@
               </p>
             </div>
             <div class="tel-container"> 
-              <a class="entrance-list-link entrance-icon" href="#">Равшан Джамшутович</a>
+              <a class="user-link user-icon entrance-icon" href="#">Равшан Джамшутович</a>
               <div class="mylinks">
                 <a href="#">Мои заказы</a>
+                <span></span>
                 <a href="#">Личный кабинет</a>
               </div>
             </div>
@@ -97,7 +109,7 @@
         <nav class="bread-crumbs">
           <ul class="bread-crumbs-list">
             <li class="bread-crumbs-item">
-              <a class="bread-crumbs-link" href="#">Главная</a>
+              <a class="bread-crumbs-link icon-home" href="#"></a>
             </li>
             <li class="bread-crumbs-item">
               <a class="bread-crumbs-link" href="#">Каталог</a>
@@ -106,7 +118,7 @@
               <a class="bread-crumbs-link" href="#">Инструмент</a>
             </li>
             <li class="bread-crumbs-item">
-                <a class="bread-crumbs-link bread-crumbs-link-current" href="#">Перфораторы</a>
+              Перфораторы
             </li>
           </ul>
         </nav>
@@ -117,54 +129,164 @@
         </h1>
       </div>
       <div class="container">
+        <div class="filters-up">
+          <div class="filters-up-left-grid">
+            <span>ФИЛЬТР:</span>
+          </div>
+          <div class="filters-up-right-grid">
+            <span>СОРТИРОВКА:</span>
+            <a href="#" class="filters-up-ankor">ПО ЦЕНЕ</a>
+            <a href="#" class="filters-up-ankor">ПО ТИПУ</a>
+            <a href="#" class="filters-up-ankor">ПО ФУНКЦИОНАЛУ</a>
+            <span class="filters-up-dirs">
+              <svg class="icon-up-dir" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              width="11" height="10" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+                <polygon  points="5.5,0 0,10 11,10 "/>
+              </svg>
+              <svg class="icon-down-dir" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                width="11" height="10" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+                <polyline  points="5.5,10 0,0 11,0 "/>
+              </svg>
+            </span>
+          </div>
+        </div>
         <div class="goods">
           <section class="filters">
             <form class="swith-form" action="https://echo.htmlacademy.ru" method="POST">
+              <h2 class="switch-header">ЦЕНА:</h2>
+              <div class="switch-list">
+                <div class="range-wrapper"> 
+                  <div class="scale">
+                    <div class="bar"></div>
+                  </div>
+                  <div class="toggle toggle-min"></div>
+                  <div class="toggle toggle-max"></div>
+                </div>
+                <div class="range-values-wrapper">
+                  <label for="min-value" class="visually-hidden">Минимальное значение</label>
+                  <input type="text" class="range-value" id="min-value" value="0">
+                  <span>-</span>
+                  <label for="max-value" class="visually-hidden">Максимальное значение</label>
+                  <input type="text" class="range-value" id="max-value" value="30000">
+                </div>
+              </div>
               <h2 class="switch-header">ПРОИЗВОДИТЕЛИ:</h2>
               <ul class="switch-list">
                   <li class="switch-item">
-                    <label for="bosch">
-                        <input type="checkbox" id="bosch" name="bosch" class="visually-hidden">
+                    <label class="checkbox-container" for="bosch">
+                        <input class="checkbox-item" type="checkbox" id="bosch" name="bosch" checked>
                         BOSCH
+                        <svg class="checkmark" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27"
+                          height="23" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
+                          <g id="layer_1">
+                          </g>
+                          <g id="layer_2">
+                            <g>
+                              <polygon fill="#c5c5c5" class="checkmark-true" points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439 		"/>
+                              <path fill="#c5c5c5" class="on" d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+                              H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+                              <path fill="#c5c5c5" class="off" d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
+                              C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z"/>
+                            </g>
+                          </g>
+                        </svg>
                     </label>
                   </li>
                   <li class="switch-item">
-                    <label for="interscol">
-                      <input type="checkbox" id="interscol" name="interscol" class="visually-hidden">
+                    <label class="checkbox-container" for="interscol">
+                      <input class="checkbox-item" type="checkbox" id="interscol" name="interscol">
                       ИНТЕРСКОЛ
+                      <svg class="checkmark" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27"
+                          height="23" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
+                        <g id="layer_1">
+                        </g>
+                        <g id="layer_2">
+                          <g>
+                            <polygon fill="#c5c5c5" class="checkmark-true" points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439 		"/>
+                            <path fill="#c5c5c5" class="on" d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+                            H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+                            <path fill="#c5c5c5" class="off" d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
+                            C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z"/>
+                          </g>
+                        </g>
+                      </svg>
                     </label>
                   </li>
                   <li class="switch-item">
-                    <label for="makita">
-                      <input type="checkbox" id="makita" name="makita" class="visually-hidden">
+                    <label class="checkbox-container" for="makita">
+                      <input class="checkbox-item" type="checkbox" id="makita" name="makita" checked>
                       MAKIta
+                      <svg class="checkmark" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27"
+                          height="23" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
+                        <g id="layer_1">
+                        </g>
+                        <g id="layer_2">
+                          <g>
+                            <polygon fill="#c5c5c5" class="checkmark-true" points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439 		"/>
+                            <path fill="#c5c5c5" class="on" d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+                            H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+                            <path fill="#c5c5c5" class="off" d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
+                            C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z"/>
+                          </g>
+                        </g>
+                      </svg>
                     </label>
                   </li>
                   <li class="switch-item">
-                    <label for="dewalt">
-                      <input type="checkbox" id="dewalt" name="dewalt" class="visually-hidden">
+                    <label class="checkbox-container" for="dewalt">
+                      <input class="checkbox-item" type="checkbox" id="dewalt" name="dewalt">
                       Dewalt
+                      <svg class="checkmark" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27"
+                          height="23" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
+                        <g id="layer_1">
+                        </g>
+                        <g id="layer_2">
+                          <g>
+                            <polygon fill="#c5c5c5" class="checkmark-true" points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439 		"/>
+                            <path fill="#c5c5c5" class="on" d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+                            H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+                            <path fill="#c5c5c5" class="off" d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
+                            C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z"/>
+                          </g>
+                        </g>
+                      </svg>
                     </label>
                   </li>
                   <li class="switch-item">
-                    <label for="hitachi">
-                      <input type="checkbox" id="hitachi" name="hitachi" class="visually-hidden">
+                    <label class="checkbox-container" for="hitachi">
+                      <input class="checkbox-item" type="checkbox" id="hitachi" name="hitachi">
                       Hitachi
+                      <svg class="checkmark" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="27"
+                          height="23" viewBox="0 0 27 23" enable-background="new 0 0 27 23" xml:space="preserve">
+                        <g id="layer_1">
+                        </g>
+                        <g id="layer_2">
+                          <g>
+                            <polygon fill="#c5c5c5" class="checkmark-true" points="7.285,7.486 4.456,10.315 12.239,18.098 26.171,4.166 23.343,1.337 12.239,12.439 		"/>
+                            <path fill="#c5c5c5" class="on" d="M21,20c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1h16.908l1.585-1.585C21.051,0.158,20.545,0,20,0
+                            H3C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3v-9.829l-2,2V20z"/>
+                            <path fill="#c5c5c5" class="off" d="M20,2c0.542,0,1,0.458,1,1v17c0,0.542-0.458,1-1,1H3c-0.542,0-1-0.458-1-1V3c0-0.542,0.458-1,1-1H20 M20,0H3
+                            C1.35,0,0,1.35,0,3v17c0,1.65,1.35,3,3,3h17c1.65,0,3-1.35,3-3V3C23,1.35,21.65,0,20,0L20,0z"/>
+                          </g>
+                        </g>
+                      </svg>
                     </label>
                   </li>
               </ul>
               <h2 class="switch-header">ПИТАНИЕ:</h2>
               <ul class="switch-list-power">
                 <li class="switch-item">
-                  <label for="battery">
-                    <input type="radio" id="battery" name="power" class="visually-hidden" checked>
+                  <label class="checkbox-container" for="battery">
+                    <input class="checkbox-item" type="radio" id="battery" name="power" checked>
                     Аккумуляторные
+                    <span class="radiomark"></span>
                   </label>
                 </li>
                 <li class="switch-item">
-                  <label for="network">
-                    <input type="radio" id="network" name="power" class="visually-hidden">
+                  <label class="checkbox-container" for="network">
+                    <input class="checkbox-item" type="radio" id="network" name="power">
                     Сетевые
+                    <span class="radiomark"></span>
                   </label>
                 </li>
               </ul>
@@ -176,7 +298,11 @@
             <ul class="goods-list">
               <li class="goods-list-item">
                 <a class="goods-list-link" href="#">
-                  <img class="goods-list-img" src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 3000">
+                  <div class="good-list-buy">
+                    <img width="218" height="170" class="goods-list-img" src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 3000">
+                    <button type="button" class="btn-buy booking-list-cart">КУПИТЬ</button>
+                    <button type="button" class="btn-bookmarks">В закладки</button>
+                  </div>
                   <h3 class="goods-list-header">
                       <span>Перфоратор<br>
                       BOSCH BFG 3000</span>
@@ -191,7 +317,11 @@
               </li>
               <li class="goods-list-item">
                 <a class="goods-list-link" href="#">
-                  <img class="goods-list-img" src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000">
+                  <div class="good-list-buy">
+                    <img width="218" height="170" class="goods-list-img" src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000">
+                    <button type="button" class="btn-buy booking-list-cart">КУПИТЬ</button>
+                    <button type="button" class="btn-bookmarks">В закладки</button>
+                  </div>
                   <h3 class="goods-list-header">
                       <span>Перфоратор<br>
                       BOSCH BFG 6000</span>
@@ -205,8 +335,12 @@
                 </a>
               </li>
               <li class="goods-list-item">
-                <a class="goods-list-link" href="#">
-                  <img class="goods-list-img" src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 2000">
+                <a class="goods-list-link new-flag" href="#">
+                  <div class="good-list-buy">
+                    <img width="218" height="170" class="goods-list-img" src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 2000">
+                    <button type="button" class="btn-buy booking-list-cart">КУПИТЬ</button>
+                    <button type="button" class="btn-bookmarks">В закладки</button>
+                  </div>
                   <h3 class="goods-list-header">
                       <span>Перфоратор<br>
                       BOSCH BFG 2000</span>
@@ -221,7 +355,11 @@
               </li>
               <li class="goods-list-item">
                 <a class="goods-list-link" href="#">
-                  <img class="goods-list-img" src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 3000">
+                  <div class="good-list-buy">
+                    <img width="218" height="170" class="goods-list-img" src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 3000">
+                    <button type="button" class="btn-buy booking-list-cart">КУПИТЬ</button>
+                    <button type="button" class="btn-bookmarks">В закладки</button>
+                  </div>
                   <h3 class="goods-list-header">
                       <span>Перфоратор<br>
                       BOSCH BFG 3000</span>
@@ -235,8 +373,12 @@
                 </a>
               </li>
               <li class="goods-list-item">
-                <a class="goods-list-link" href="#">
-                  <img class="goods-list-img" src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000">
+                <a class="goods-list-link new-flag" href="#">
+                  <div class="good-list-buy">
+                    <img width="218" height="170" class="goods-list-img" src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000">
+                    <button type="button" class="btn-buy booking-list-cart">КУПИТЬ</button>
+                    <button type="button" class="btn-bookmarks">В закладки</button>
+                  </div>
                   <h3 class="goods-list-header">
                       <span>Перфоратор<br>
                       BOSCH BFG 6000</span>
@@ -250,8 +392,12 @@
                 </a>
               </li>
               <li class="goods-list-item">
-                <a class="goods-list-link" href="#">
-                  <img class="goods-list-img" src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 2000">
+                <a class="goods-list-link " href="#">
+                  <div class="good-list-buy">
+                    <img width="218" height="170" class="goods-list-img" src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 2000">
+                    <button type="button" class="btn-buy booking-list-cart">КУПИТЬ</button>
+                    <button type="button" class="btn-bookmarks">В закладки</button>
+                  </div>
                   <h3 class="goods-list-header">
                       <span>Перфоратор<br>
                       BOSCH BFG 2000</span>
@@ -265,8 +411,12 @@
                 </a>
               </li>
               <li class="goods-list-item">
-                <a class="goods-list-link" href="#">
-                  <img class="goods-list-img" src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 3000">
+                <a class="goods-list-link new-flag"  href="#">
+                  <div class="good-list-buy">
+                    <img width="218" height="170" class="goods-list-img" src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 3000">
+                    <button type="button" class="btn-buy booking-list-cart">КУПИТЬ</button>
+                    <button type="button" class="btn-bookmarks">В закладки</button>
+                  </div>
                   <h3 class="goods-list-header">
                       <span>Перфоратор<br>
                       BOSCH BFG 3000</span>
@@ -281,7 +431,11 @@
               </li>
               <li class="goods-list-item">
                 <a class="goods-list-link" href="#">
-                  <img class="goods-list-img" src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000">
+                  <div class="good-list-buy">
+                    <img width="218" height="170" class="goods-list-img" src="img/perforator_2.jpg" alt="Перфоратор BOSCH BFG 6000">
+                    <button type="button" class="btn-buy booking-list-cart">КУПИТЬ</button>
+                    <button type="button" class="btn-bookmarks">В закладки</button>
+                  </div>
                   <h3 class="goods-list-header">
                       <span>Перфоратор<br>
                       BOSCH BFG 6000</span>
@@ -296,7 +450,11 @@
               </li>
               <li class="goods-list-item">
                 <a class="goods-list-link" href="#">
-                  <img class="goods-list-img" src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 2000">
+                  <div class="good-list-buy">
+                    <img width="218" height="170"  class="goods-list-img" src="img/perforator_1.jpg" alt="Перфоратор BOSCH BFG 2000">
+                    <button type="button" class="btn-buy booking-list-cart">КУПИТЬ</button>
+                    <button type="button" class="btn-bookmarks">В закладки</button>
+                  </div>
                   <h3 class="goods-list-header">
                       <span>Перфоратор<br>
                       BOSCH BFG 2000</span>
@@ -310,6 +468,12 @@
                 </a>
               </li>
             </ul>
+            <div class="pagination">
+              <a href="#" class="pagination-ankor current">1</a>
+              <a href="#" class="pagination-ankor">2</a>
+              <a href="#" class="pagination-ankor">3</a>
+              <a href="#" class="pagination-ankor">СЛЕДУЮЩАЯ</a>
+            </div>
           </section>
         </div>
       </div>
@@ -350,13 +514,13 @@
               <li class="nav-item">
                 <a class="footer-link-yellow" href="">Материалы</a>
               </li>
-              <li>
+              <li class="nav-item">
                 <a class="footer-link-yellow" href="">Техника</a>
               </li>
-              <li>
+              <li class="nav-item">
                 <a class="footer-link-yellow" href="">Инструмент</a>
-              </li>
-              <li>
+              </li class="nav-item" >
+              <li class="nav-item">
                 <a class="footer-link-yellow" href="">Спецпредложения</a>
               </li>
             </ul>
@@ -373,20 +537,14 @@
             </p>
             <ul class="social-networks-list">
               <li class="social-networks-list-item">
-                <a class="social-networks-list-link" href="">
-                  <img src="img/vk-icon.svg" alt="ВКонтакте">
-                </a>
-              </li>
-              <li class="social-networks-list-item">
-                <a class="social-networks-list-link" href="">
-                  <img src="img/fb-icon.svg" alt="Фейсбук">
-                </a>
-              </li>
-              <li class="social-networks-list-item">
-                <a class="social-networks-list-link" href="">
-                  <img src="img/insta-icon.svg" alt="Инстаграм">
-                </a>
-              </li>
+                  <a class="social-networks-list-link vk-icon" href="#" aria-label="ВКонтакте"></a>
+                </li>
+                <li class="social-networks-list-item">
+                  <a class="social-networks-list-link facebook-icon" href="#" aria-label="Фейсбук"></a>
+                </li>
+                <li class="social-networks-list-item">
+                  <a class="social-networks-list-link instagram-icon" href="#" aria-label="Инстаграм"></a>
+                </li>
             </ul>
             <p class="feedback">
               Обратная связь:<br>
@@ -400,15 +558,37 @@
         </div>
       </section>
     </footer>
-    <section style="display : none">
+    <section class="modal modal-buy">
       <h2 class="visually-hidden">Оформление Заказа</h2>
-      <p class="msg-block">
-        <img src="img/okay.svg" alt="Зеленая галочка">
-      </p>
-      <p class="button-blok">
-        <a href="" class="order-button">ОФОРМИТЬ ЗАКАЗ</a>
+      <div class="msg-block entarance-form">
+        <img width="66" height="80" src="img/okay.svg" alt="Зеленая галочка">
+        <h2 class="success-modal">Товар добавлен в корзину!</h2>
+      </div>
+      <div class="submit-btn-wrapper">
+        <a href="#" class="red-btn">ОФОРМИТЬ ЗАКАЗ</a>
         <button class="close-button" type="button">ПРОДОЛЖИТЬ ПОКУПКИ</button>
-      </p>
+      </div>
+      <button type="button" class="modal-close">
+        <span class="visually-hidden">Закрыть</span>
+      </button>
     </section>
+    <script>
+        // Карта
+        var buy = document.querySelector(".btn-buy");
+        var close = document.querySelector(".modal-close");
+        var popupBuy = document.querySelector(".modal-buy");
+
+        buy.addEventListener("click", function(evn){
+          evn.preventDefault();
+          popupBuy.classList.add("modal-show");
+        });
+  
+        close.addEventListener("click", function(evn){
+          evn.preventDefault();
+          popupBuy.classList.remove("modal-show");
+          popupBuy.classList.remove("modal-error");
+        });
+  
+      </script>
   </body>
 </html>
