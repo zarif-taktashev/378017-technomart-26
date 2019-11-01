@@ -17,7 +17,7 @@
  window.addEventListener("keydown", function(evt){
     if (evt.keyCode === 27) {
         evt.preventDefault();
-        if (popup.classList.contains("modal-show")) {
+        if (popupMap.classList.contains("modal-show")) {
             popupMap.classList.remove("modal-show");
         }
     }

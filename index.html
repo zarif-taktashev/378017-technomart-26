@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.min.css">
   </head>
   <body>
     <header>
@@ -187,23 +187,31 @@
           </div>
           <div class="divisions">
             <div class="divisions-slider">
+              <input type="radio" name="slide" id="slider-one">
+              <input type="radio" name="slide" id="slider-two" checked>
               <ul class="slider">
-                <li class="slider-item slider-item-current">
+                <li class="slider-item slider-one">
                   <div>
                     <h3 class="slider-header">Дрели</h3>
+                    <span>Настоящие мужские игрушки </span>
+                  </div>
+                  <a href="#" class="red-btn">ОТКРЫТЬ КАТАЛОГ</a>
+                </li>
+                <li class="slider-item slider-two">
+                  <div>
+                    <h3 class="slider-header">Перфораторы</h3>
                     <span>Соседям на радость!</span>
                   </div>
                   <a href="#" class="red-btn">ОТКРЫТЬ КАТАЛОГ</a>
                 </li>
-                <li></li>
               </ul>
-              <a href="#" class="icon-left">
+              <label for="slider-one" class="icon-left">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                   width="22" height="40" viewBox="0 0 22 40" enable-background="new 0 0 22 40" xml:space="preserve">
                   <polygon fill="#FFFFFF" points="19.83,-0.035 21.919,2.064 4.13,19.947 21.977,37.886 19.887,39.985 -0.048,19.947 "/>
                 </svg>
-              </a>
-              <a href="#" class="icon-right">
+              </label>
+              <label for="slider-two" class="icon-right">
                 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" width="22"
                   height="40" viewBox="0 0 22 40" enable-background="new 0 0 22 40" xml:space="preserve">
                   <g>
@@ -212,10 +220,10 @@
                     <polygon fill="#FFFFFF" points="2.098,-0.035 0.009,2.064 17.798,19.947 -0.048,37.886 2.041,39.985 21.976,19.947 	"/>
                   </g>
                </svg>
-              </a>
+              </label>
               <div class="slider-number">
-                <a href="#" class="slider-switch"></a>
-                <a href="#" class="slider-switch current"></a>
+                <label for="slider-one" name="slide" class="slider-switch slider-switch-one"></label>
+                <label for="slider-two" name="slide" class="slider-switch slider-switch-two"></label>
               </div>
             </div>
             <div class="divisions-column">
@@ -612,7 +620,7 @@
         </button>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCDQoNC-0YHRgdC40Y8sIDE5MTE4Ng!5e0!3m2!1sru!2skz!4v1572542644653!5m2!1sru!2skz" width="940" height="450" style="border:0;" allowfullscreen=""></iframe>      </div>
     </section>
-    <script  src="js/map.js"></script>
+    <script  src="js/map.min.js"></script>
     <script  src="js/popup.js"></script>
   </body>
 </html>

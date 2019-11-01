@@ -972,6 +972,24 @@ img{
 .divisions-slider{
     flex-grow: 1;
 }
+.divisions-slider input{
+    opacity: 0;
+    position: absolute;
+}
+#slider-two:checked ~ .slider .slider-two{
+    background: url("../img/manWithDrel.jpg") no-repeat;
+}
+#slider-one:checked ~ .slider .slider-one{
+    background: url("../img/drelWithMan.png") no-repeat;
+}
+#slider-one:checked ~ .slider .slider-one,
+#slider-two:checked ~ .slider .slider-two{
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+    -webkit-background-size: 100%; 
+    display: flex;
+}
 .slider{
     list-style: none;
     padding: 0;
@@ -982,17 +1000,12 @@ img{
 }
 .slider-item{
     flex-grow: 1;
-    background: url("../img/manWithDrel.jpg") no-repeat;
     padding: 25px;
     position: relative;
-    display: flex;
+    display: none;
     flex-direction: column;
     justify-content: space-between;
     background-position: 0 0;
-    -moz-background-size: 100%;
-    -o-background-size: 100%;
-    background-size: 100%;
-    -webkit-background-size: 100%; 
 }
 .slider-number{
     position: absolute;
@@ -1010,7 +1023,8 @@ img{
     display: block;
     position: relative;
 }
-.slider-switch.current::before{
+#slider-two:checked ~ .slider-number .slider-switch-two::before,
+#slider-one:checked ~ .slider-number .slider-switch-one::before{
     content:'';
     display:block;
     position: absolute;
