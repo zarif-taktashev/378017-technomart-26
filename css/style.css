@@ -150,10 +150,12 @@ img {
     box-shadow: 0px 5px 0 0 #b52933;
 }
 .logo:hover,
-.logo:focus,
-.footer-logo:hover,
-.footer-logo:focus {
+.footer-logo:hover {
     background-color: #ca2c37;
+}
+.logo:focus,
+.footer-logo:focus {
+    background-color: #ba2732;
 }
 .search {
     color: #ffffff;
@@ -398,6 +400,7 @@ img {
     vertical-align: top;
     text-decoration: underline;
     display: inline-block;
+    color: #32425c;
     margin-right: 15px;
     max-width: 105px;
 }
@@ -532,6 +535,7 @@ img {
 }
 .about .red-btn {
     width: 220px;
+    text-transform: uppercase;
 }
 .advantages-list {
     margin: 0;
@@ -547,7 +551,9 @@ img {
 }
 .contacts .red-btn {
     position: absolute;
+    text-transform: uppercase;
     bottom: 0;
+    padding-left: 45px;
 }
 .contacts figure {
     margin: 0;
@@ -560,7 +566,7 @@ img {
     text-transform: uppercase
 }
 .contacts .paragraph-text {
-    margin-bottom: 35px;
+    margin-bottom: 32px;
 }
 .paragraph-text {
     font-size: 13px;
@@ -605,7 +611,9 @@ img {
     text-align: center;
     background-color: #ee3643;
 }
-.red-btn:hover,
+.red-btn:hover {
+    background-color: #ca2c37;
+}
 .red-btn:active {
     background-color: #ba2732;
 }
@@ -707,6 +715,33 @@ img {
     text-transform: uppercase;
     padding-bottom: 20px;
 }
+.switch-item:hover .radiomark {
+    border: 2px solid #b5b5b5;
+}
+.switch-item:hover .radiomark::after {
+    background: #b5b5b5;
+}
+.checkbox-item:disabled + .radiomark {
+    border: 2px solid #e9e9e9;
+}
+.checkbox-item:disabled + .radiomark::after {
+    background-color: #e9e9e9;
+}
+.checkbox-item:disabled ~ span {
+    color: #adadad;
+}
+.switch-item:hover,
+.switch-item:hover polygon,
+.switch-item:hover path {
+    fill: #b5b5b5;
+    color:#b5b5b5;
+}
+.checkbox-item:disabled ~ span
+.checkbox-item:disabled ~ svg polygon,
+.checkbox-item:disabled ~ svg path {
+    fill: #e9e9e9;
+    color:#e9e9e9;
+}
 .checkbox-container {
     display: block;
     padding-left: 35px;
@@ -757,8 +792,8 @@ img {
     display: none;
     top: 4px;
     left: 5px;
-    width: 8px;
-    height: 8px;
+    width: 7px;
+    height: 7px;
     border-radius: 50%;
     background: #c5c5c5;
 }
@@ -785,10 +820,10 @@ img {
 .producers-wrapper .goods-list-item:nth-child(3n) {
     margin-right: 20px;
 }
-.good-list-buy:hover .goods-list-img {
+.goods-list-link:hover .goods-list-img {
     opacity: 0;
 }
-.good-list-buy:hover  button {
+.goods-list-link:hover  button {
     opacity: 1;
 }
 .good-list-buy {
@@ -805,7 +840,7 @@ img {
     opacity: 0;
     font-size: 14px;
     line-height: 18px;
-    padding: 10px 30px;
+    padding: 8px 30px;
     border-radius: 5px;
     width: 135px;
     overflow: hidden;
@@ -833,6 +868,7 @@ img {
     left: 45px;
     top: 90px;
     background-color: #ffffff;
+    text-transform: uppercase;
     border: 3px solid #63a63e;
 }
 .btn-bookmarks:hover {
@@ -929,6 +965,7 @@ img {
     font-weight: 700;
     border-radius: 3px 0 0 3px;
     padding-left: 15px;
+    vertical-align: middle;
     display: inline-block;
 }
 .current-price::after {
@@ -1016,6 +1053,7 @@ img {
     text-transform: none;
 }
 .division-ankor {
+    vertical-align: middle;
     display: inline-block;
     font-size: 14px;
     font-weight: normal;
@@ -1030,6 +1068,7 @@ img {
 }
 .division-ankor::after {
     content: '';
+    vertical-align: middle;
     display: inline-block;
     background: black;
     border-radius: 5px;
@@ -1176,8 +1215,10 @@ img {
     border: 1px solid #e5e5e5;
     height: 145px;
     width: 220px;
+    position: relative;
     justify-content: center;
     align-items: center;
+    padding-bottom: 5px;
 }
 .services {
     background-color: #f4f8f9;
@@ -1615,7 +1656,7 @@ img {
     flex-wrap: wrap;
     justify-content: center;
     min-width: 378px;
-    padding-left: 20px;
+    padding-left: 23px;
 }
 .social-networks-list-link {
     position: relative;

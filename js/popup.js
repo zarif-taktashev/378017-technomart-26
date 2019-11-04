@@ -44,7 +44,7 @@ form.addEventListener("submit", function (evt){
 });
 
 window.addEventListener("keydown", function(evt){
-    if (evt.keyCode === 27) {
+    if(evt.keyCode === 27){
         evt.preventDefault();
         if (popup.classList.contains("modal-show")){
             popup.classList.remove("modal-show");
