@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <title>HTML Academy: Техномарт</title>
     <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">  
+    <link rel="stylesheet" href="css/style.min.css">  
   </head>
   <body>
     <header>
@@ -13,7 +13,7 @@
         <div class="container">
           <div class="logo-wrapper">
             <div class="logo-container">
-              <a class="logo" href="">Техномарт</a>
+              <a class="logo" href="index.html">Техномарт</a>
               <form action="#" class="search-form">
                 <input id="search" class="search" type="text">
                 <svg width="17" height="17" class="search-svg" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
@@ -36,7 +36,7 @@
                 <a class="booking-list-ankor booking-list-bookmarks" href="#">Закладки: 0</a>
               </li>
               <li class="booking-list-item">
-                <a class="booking-list-ankor booking-list-cart" href="#">Корзина: 0</a>
+                <a class="booking-list-ankor booking-list-cart activ" href="#">Корзина: 10</a>
               </li>
               <li class="booking-list-item">
                 <a class="booking-list-order" href="#">Оформить заказ</a>
@@ -50,11 +50,13 @@
           <div class="entrance-wrapper">
             <h2 class="visually-hidden">Войти/Зарегестрироваться</h2>
             <p class="short-description">
-              Интернет-магазин<br>
-              строительных материалов<br>
-              и инструментов для рем
+              <span>
+              Интернет-магазин
+              строительных материалов
+              </span> 
+              <span>и инструментов для ремонта</span>
             </p>
-            <div class="tel-container"> 
+            <div class="tel-container telephone"> 
               <p class="tel">
                 +7 (812) 555-05-55
               </p>
@@ -62,9 +64,12 @@
                 г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
               </p>
             </div>
-            <div class="tel-container"> 
-              <a class="user-link user-icon entrance-icon" href="#">Равшан Джамшутович</a>
-              <div class="mylinks">
+            <div class="tel-container user-logo">
+              <div>
+                <a class="user-link user-icon entrance-icon" href="https://htmlacademy.ru/login?redirect_url=https%3A%2F%2Fup.htmlacademy.ru%2Fadaptive%2F18">Равшан Джамшутович</a>
+                <a class="logout" href="https://htmlacademy.ru/logout" aria-label="Выйти"></a>
+              </div>
+              <div class="my-links">
                 <a href="#">Мои заказы</a>
                 <span></span>
                 <a href="#">Личный кабинет</a>
@@ -134,19 +139,23 @@
             <span>ФИЛЬТР:</span>
           </div>
           <div class="filters-up-right-grid">
-            <span>СОРТИРОВКА:</span>
+            <span class="sort">СОРТИРОВКА:</span>
             <a href="#" class="filters-up-ankor">ПО ЦЕНЕ</a>
             <a href="#" class="filters-up-ankor">ПО ТИПУ</a>
             <a href="#" class="filters-up-ankor">ПО ФУНКЦИОНАЛУ</a>
             <span class="filters-up-dirs">
-              <svg class="icon-up-dir" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-              width="11" height="10" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
-                <polygon  points="5.5,0 0,10 11,10 "/>
-              </svg>
-              <svg class="icon-down-dir" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+              <a href="#">
+                  <svg class="icon-up-dir" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                  width="11" height="10" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
+                    <polygon  points="5.5,0 0,10 11,10 "/>
+                  </svg>
+              </a>
+             <a href="#">
+                <svg class="icon-down-dir" version="1.1"  xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                 width="11" height="10" viewBox="0 0 11 10" enable-background="new 0 0 11 10" xml:space="preserve">
                 <polyline  points="5.5,10 0,0 11,0 "/>
               </svg>
+             </a>
             </span>
           </div>
         </div>
@@ -159,8 +168,8 @@
                   <div class="scale">
                     <div class="bar"></div>
                   </div>
-                  <div class="toggle toggle-min"></div>
-                  <div class="toggle toggle-max"></div>
+                  <button type="button" class="toggle toggle-min"></button>
+                  <button type="button" class="toggle toggle-max"></button>
                 </div>
                 <div class="range-values-wrapper">
                   <label for="min-value" class="visually-hidden">Минимальное значение</label>
@@ -304,14 +313,13 @@
                     <button type="button" class="btn-bookmarks">В закладки</button>
                   </div>
                   <h3 class="goods-list-header">
-                      <span>Перфоратор<br>
-                      BOSCH BFG 3000</span>
+                      <span>Перфоратор BOSCH BFG 3000</span>
                   </h3>
                   <p class="old-price"> 
                     22500 Р.
                   </p>
                   <p class="current-price">
-                    <span>15000 Р.</span>
+                    <span>15500 Р.</span>
                   </p>
                 </div>
               </li>
@@ -323,8 +331,7 @@
                     <button type="button" class="btn-bookmarks">В закладки</button>
                   </div>
                   <h3 class="goods-list-header">
-                      <span>Перфоратор<br>
-                      BOSCH BFG 6000</span>
+                      <span>Перфоратор BOSCH BFG 6000</span>
                   </h3>
                   <p class="old-price">
                     30500 Р.
@@ -342,8 +349,7 @@
                     <button type="button" class="btn-bookmarks">В закладки</button>
                   </div>
                   <h3 class="goods-list-header">
-                      <span>Перфоратор<br>
-                      BOSCH BFG 2000</span>
+                      <span>Перфоратор BOSCH BFG 2000</span>
                   </h3>
                   <p class="old-price">
                     22500 Р.
@@ -361,14 +367,13 @@
                     <button type="button" class="btn-bookmarks">В закладки</button>
                   </div>
                   <h3 class="goods-list-header">
-                      <span>Перфоратор<br>
-                      BOSCH BFG 3000</span>
+                      <span>Перфоратор BOSCH BFG 3000</span>
                   </h3>
                   <p class="old-price"> 
                     22500 Р.
                   </p>
                   <p class="current-price">
-                    <span>15000 Р.</span>
+                    <span>15500 Р.</span>
                   </p>
                 </div>
               </li>
@@ -380,8 +385,7 @@
                     <button type="button" class="btn-bookmarks">В закладки</button>
                   </div>
                   <h3 class="goods-list-header">
-                      <span>Перфоратор<br>
-                      BOSCH BFG 6000</span>
+                      <span>Перфоратор BOSCH BFG 6000</span>
                   </h3>
                   <p class="old-price">
                     30500 Р.
@@ -399,8 +403,7 @@
                     <button type="button" class="btn-bookmarks">В закладки</button>
                   </div>
                   <h3 class="goods-list-header">
-                      <span>Перфоратор<br>
-                      BOSCH BFG 2000</span>
+                      <span>Перфоратор BOSCH BFG 2000</span>
                   </h3>
                   <p class="old-price">
                     22500 Р.
@@ -418,14 +421,13 @@
                     <button type="button" class="btn-bookmarks">В закладки</button>
                   </div>
                   <h3 class="goods-list-header">
-                      <span>Перфоратор<br>
-                      BOSCH BFG 3000</span>
+                      <span>Перфоратор BOSCH BFG 3000</span>
                   </h3>
                   <p class="old-price"> 
                     22500 Р.
                   </p>
                   <p class="current-price">
-                    <span>15000 Р.</span>
+                    <span>15500 Р.</span>
                   </p>
                 </div>
               </li>
@@ -437,8 +439,7 @@
                     <button type="button" class="btn-bookmarks">В закладки</button>
                   </div>
                   <h3 class="goods-list-header">
-                      <span>Перфоратор<br>
-                      BOSCH BFG 6000</span>
+                      <span>Перфоратор BOSCH BFG 6000</span>
                   </h3>
                   <p class="old-price">
                     30500 Р.
@@ -456,8 +457,7 @@
                     <button type="button" class="btn-bookmarks">В закладки</button>
                   </div>
                   <h3 class="goods-list-header">
-                      <span>Перфоратор<br>
-                      BOSCH BFG 2000</span>
+                      <span>Перфоратор BOSCH BFG 2000</span>
                   </h3>
                   <p class="old-price">
                     22500 Р.
@@ -472,22 +472,35 @@
               <a href="#" class="pagination-ankor current">1</a>
               <a href="#" class="pagination-ankor">2</a>
               <a href="#" class="pagination-ankor">3</a>
-              <a href="#" class="pagination-ankor">СЛЕДУЮЩАЯ</a>
+              <a href="#" class="pagination-ankor next">СЛЕДУЮЩАЯ</a>
             </div>
           </section>
         </div>
       </div>
+      <section class="about-rotary">
+        <div class="container">
+          <h2 class="services-header">
+              ПАРА СЛОВ О ПЕРФОРАТОРАХ
+          </h2>
+          <p class="services-description">
+              Перфоратор — универсальный строительный инструмент.
+              Предназначен для сверления и долбления отверстий в кирпиче, бетоне и камне.<br>
+              Существуют электромеханические и пневматические перфораторы. Современные модели могут выполнять функции дрели, шуруповерта и отбойного молотка.
+              В ассортиментном ряду есть выбор «трехрежимников»: в одном устройстве будут совмещены отбойный молоток и ударная дрель.
+          </p>
+        </div>
+      </section>
     </main>
     <footer class="footer">
       <div class="container">
         <div class="footer-wrapper">
           <section class="footer-address-wrapper">
             <h2 class="visually-hidden">Адресс</h2>
-            <a class="footer-logo" href="">
+            <a class="footer-logo" href="index.html">
               Техномарт
             </a>
             <p class="footer-address">
-              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8 <br>
+              г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
               +7 (812) 555-05-55
             </p>
           </section>
@@ -531,8 +544,8 @@
         <div class="container">
           <div class="social-networks-wrapper">
             <h2 class="visually-hidden">Мы в социальных сетях</h2>
-            <p class="feedback">
-              © 2010–2019 Компания «Техномарт»<br>
+            <p class="feedback-lows">
+              © 2010–2019 Компания «Техномарт»
               Все права защищены
             </p>
             <ul class="social-networks-list">
@@ -547,12 +560,12 @@
                 </li>
             </ul>
             <p class="feedback">
-              Обратная связь:<br>
-              <a class="feedback-link" href="#">@htmlacademy.ru</a>
+              Обратная связь:
+              <a class="feedback-link" href="https://htmlacademy.ru">mail@htmlacademy.ru</a>
             </p>
             <p class="feedback">
-              Разработано — <br>
-              <a class="feedback-link" href="htmlacademy.ru">htmlacademy.ru</a>
+              Разработано —
+              <a class="feedback-link" href="https://htmlacademy.ru">htmlacademy.ru</a>
             </p>
           </div>
         </div>
@@ -572,23 +585,6 @@
         <span class="visually-hidden">Закрыть</span>
       </button>
     </section>
-    <script>
-        // Карта
-        var buy = document.querySelector(".btn-buy");
-        var close = document.querySelector(".modal-close");
-        var popupBuy = document.querySelector(".modal-buy");
-
-        buy.addEventListener("click", function(evn){
-          evn.preventDefault();
-          popupBuy.classList.add("modal-show");
-        });
-  
-        close.addEventListener("click", function(evn){
-          evn.preventDefault();
-          popupBuy.classList.remove("modal-show");
-          popupBuy.classList.remove("modal-error");
-        });
-  
-      </script>
+    
   </body>
 </html>
