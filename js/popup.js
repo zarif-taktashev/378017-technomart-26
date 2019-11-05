@@ -1,4 +1,4 @@
-var link = document.querySelector(".entrance-list-link");
+var link = document.querySelector(".open-form");
 var close = document.querySelector(".modal-close");
 var popup = document.querySelector(".modal-login");
 var login = popup.querySelector("[name=login]");
@@ -46,7 +46,7 @@ form.addEventListener("submit", function (evt){
 window.addEventListener("keydown", function(evt){
     if(evt.keyCode === 27){
         evt.preventDefault();
-        if (popup.classList.contains("modal-show")){
+        if(popup.classList.contains("modal-show")){
             popup.classList.remove("modal-show");
             popup.classList.remove("modal-error"); 
             popupMap.classList.remove("modal-show");
