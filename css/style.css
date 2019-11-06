@@ -174,7 +174,9 @@ img {
 }
 .search {
     color: #ffffff;
+    height: 100%;
     background-color: #32425c;
+    min-width: 260px;
     border: 0;
     padding: 10px 15px; 
 }
@@ -404,6 +406,9 @@ img {
     border: 3px solid #ffffff;
     position: relative;
 }
+.tel a {
+    color: #ee3643;
+}
 .tel::before {
     position: absolute;
     content: "";
@@ -570,7 +575,7 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding: 85px 0;
+    padding: 86px 0;
     padding-top: 53px;
 }
 .about {
@@ -741,11 +746,11 @@ img {
     padding: 12px 0;
     border-bottom: 1px solid #e5e5e5;
     margin: 0;
-    margin-bottom: 18px;
+    margin-bottom: 19px;
     padding-bottom: 0;
 }
 .switch-list-power {
-    padding: 15px 0;
+    padding: 13px 0;
     margin: 0;
     margin-bottom: 58px;
     padding-bottom: 0;
@@ -855,7 +860,7 @@ img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    padding-top: 10px;
+    padding-top: 12px;
 }
 .goods-list {
     margin: 0;
@@ -898,6 +903,9 @@ img {
     overflow: hidden;
     vertical-align: middle;
     text-align: center;
+}
+.good-list-buy button:focus {
+    opacity: 1;
 }
 .btn-buy {
     left: 45px;
@@ -1111,7 +1119,13 @@ img {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
-    padding-left: 28px;
+    padding-left: 29px;
+}
+.bucket-svg {
+    margin-right: 6px;   
+}
+.bus-svg {
+    margin-top: 5px;
 }
 .divisions-column .division-card:last-child {
     margin-bottom: 0;
@@ -1178,8 +1192,19 @@ img {
     -ms-flex-positive: 1;
     flex-grow: 1;
 }
+.division-input-left:focus ~ .icon-left {
+    outline: none;
+    border-color: rgb(77, 144, 254);
+    -webkit-box-shadow: 0 0 10px rgb(77, 144, 254);
+    box-shadow: 0 0 10px rgb(77, 144, 254);
+}
+.division-input-right:focus ~ .icon-right {
+    outline: none;
+    border-color: rgb(77, 144, 254);
+    -webkit-box-shadow: 0 0 10px rgb(77, 144, 254);
+    box-shadow: 0 0 10px rgb(77, 144, 254);
+}
 .divisions-slider input {
-    opacity: 0;
     position: absolute;
 }
 #slider-two:checked ~ .slider .slider-two {
@@ -1530,7 +1555,7 @@ img {
 .filters-up .filters-up-ankor {
     max-width: 115px;
     color: #acaaa5;
-    margin-right: 69px;
+    margin-right: 68px;
     border-bottom: 1px dotted red;
 }
 .filters-up-ankor:hover {
@@ -1542,6 +1567,25 @@ img {
 }
 .filters-up-dirs {
     position: relative;
+}
+.filters-up-svg:focus svg {
+    outline: none;
+    border-color: rgb(77, 144, 254);
+    -webkit-box-shadow: 0 0 10px rgb(77, 144, 254);
+    box-shadow: 0 0 10px rgb(77, 144, 254);
+}
+.checkbox-item:focus,
+.checkbox-item:focus ~ span {
+    outline: none;
+    border-color: rgb(77, 144, 254);
+    -webkit-box-shadow: 0 0 10px rgb(77, 144, 254);
+    box-shadow: 0 0 10px rgb(77, 144, 254);
+}
+.icon-home:focus::before {
+    outline: none;
+    border-color: rgb(77, 144, 254);
+    -webkit-box-shadow: 0 0 10px rgb(77, 144, 254);
+    box-shadow: 0 0 10px rgb(77, 144, 254);
 }
 .icon-down-dir {
     position: absolute;
@@ -1675,7 +1719,7 @@ img {
     background-color: #ababab;
 }
 .about-rotary {
-    padding: 67px 0 8px;
+    padding: 67px 0 7px;
     background-color: #f2f6f8;
 }
 .about-rotary .services-description {
@@ -1701,7 +1745,7 @@ img {
     line-height: 24px;
     color: #ffffff;
     margin: 0;
-    padding: 30px 5px 20px;
+    padding: 31px 5px 20px;
 }
 .footer-logo {
     font-size: 30px;
@@ -1774,7 +1818,7 @@ img {
     line-height: 24px;
     color: #ffd180;
     background-color: #32425c;
-    padding-top: 37px;
+    padding-top: 35px;
     max-width: 130px;
     display: block;
 }
@@ -1799,7 +1843,7 @@ img {
     background-color: #32425c;
 }
 .nav-list-footer .nav-item {
-    margin-left: 60px;
+    margin-left: 59px;
 }
 .nav-list-footer .nav-item:first-child {
     margin-left: 0;
